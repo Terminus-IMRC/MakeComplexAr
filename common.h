@@ -11,6 +11,7 @@
 
 typedef int ms_t;
 typedef uint64_t indexBit_t;
+/* can be used in X<=6 at least */
 typedef long int num_ar_t;
 
 struct ar_draft_chain_t{
