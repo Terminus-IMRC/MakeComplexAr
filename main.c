@@ -31,8 +31,8 @@ int main()
 
 	make_ar_index();
 
-	/*MakeComplexAr_init();
-	MakeComplexAr(0);*/
+	MakeComplexAr_init();
+	MakeComplexAr(0);
 
 	return 0;
 }

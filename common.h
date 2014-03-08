@@ -43,4 +43,11 @@ void print_par(ms_t *par);
 void print_ar();
 void make_ar_index();
 
+/* in MakeComplexAr.c */
+void MakeComplexAr_init();
+void MakeComplexAr(int level);
+indexBit_t and_index(indexBit_t a, indexBit_t b);
+indexBit_t or_index(indexBit_t a, indexBit_t b);
+void output_par_pair();
+
 #endif /* _COMMON_H_INSIDE_ */

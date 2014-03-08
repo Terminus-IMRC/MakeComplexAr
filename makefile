@@ -1,5 +1,5 @@
 PROG=MakeComplexAr
-SRCS=main.c X.c ar.c
+SRCS=main.c X.c ar.c MakeComplexAr.c
 OBJS=$(SRCS:%.c=%.c.o)
 ALLDEP=$(MAKEFILE_LIST)
 
