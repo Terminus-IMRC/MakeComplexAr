@@ -109,13 +109,41 @@ num_ar_t probe_ar_draft_chain_len()
 	return count;
 }
 
+void print_par(ms_t *par)
+{
+	int i;
+
+	for(i=0; i<X; i++)
+		printf("%d%c", par[i], i!=X-1?' ':'\n');
+
+	return;
+}
+
 void print_ar()
+{
+	int i;
+
+	for(i=0; i<num_ar; i++)
+		print_par(ar[i]);
+
+	return;
+}
+
+void make_ar_index()
 {
 	int i, j;
 
-	for(i=0; i<num_ar; i++)
-		for(j=0; j<X; j++)
-			printf("%d%c", ar[i][j], j!=X-1?' ':'\n');
+	ar_index=(indexBit_t*)malloc(num_ar*sizeof(indexBit_t));
+	assert(ar_index);
+
+	for(i=0; i<num_ar; i++){
+		ar_index[i]=(indexBit_t)1;
+		for(j=1; j<X; j++){
+			ar_index[i]<<=ar[i][j]-ar[i][j-1];
+			ar_index[i]|=(indexBit_t)1;
+		}
+		ar_index[i]<<=X*X-ar[i][X-1];
+	}
 
 	return;
 }

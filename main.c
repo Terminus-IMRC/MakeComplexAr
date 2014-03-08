@@ -29,6 +29,8 @@ int main()
 	/* only for debug; annoying in slow speed console */
 	/*print_ar();*/
 
+	make_ar_index();
+
 	/*MakeComplexAr_init();
 	MakeComplexAr(0);*/
 

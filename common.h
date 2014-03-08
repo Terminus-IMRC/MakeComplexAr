@@ -39,6 +39,8 @@ void str_to_par(ms_t *par, char *str);
 void ar_draft_chain_to_ar();
 void alloc_ar();
 num_ar_t probe_ar_draft_chain_len();
+void print_par(ms_t *par);
 void print_ar();
+void make_ar_index();
 
 #endif /* _COMMON_H_INSIDE_ */
