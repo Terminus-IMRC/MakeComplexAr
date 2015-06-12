@@ -26,6 +26,7 @@ extern int X;
 extern ms_t **ar, *ar_1dim;
 extern indexBit_t *ar_index;
 extern num_ar_t num_ar;
+extern int depth;
 
 /* in X.c */
 int probe_X(char *str);

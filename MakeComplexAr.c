@@ -3,6 +3,7 @@
 
 indexBit_t cur_index;
 num_ar_t *element_history;
+int depth;
 
 void MakeComplexAr_init()
 {
@@ -23,7 +24,7 @@ void MakeComplexAr(int level)
 		if(!and_index(cur_index, ar_index[i])){
 			cur_index=or_index(cur_index, ar_index[i]);
 			element_history[level]=i;
-			if(level<X-1)
+			if(level<depth-1)
 				MakeComplexAr(level+1);
 			else
 				output_par_pair();
@@ -47,8 +48,8 @@ void output_par_pair()
 {
 	int i;
 
-	for(i=0; i<X-1; i++)
-		printf("%ld%c", element_history[i], i!=(X-1)-1?' ':'\n');
+	for(i=0; i<depth; i++)
+		printf("%ld%c", element_history[i], i!=depth-1?' ':'\n');
 
 	return;
 }
